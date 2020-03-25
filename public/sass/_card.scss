@@ -1,0 +1,30 @@
+.card{
+   max-width: 18rem;
+}
+.border-left-one {
+   border-left: .35rem solid 
+   #7b93dd !important;
+}
+.border-left-second {
+   border-left: .35rem solid 
+   #75d369 !important;
+}
+.border-left-third {
+   border-left: .35rem solid 
+   #ec88cb !important;
+}
+.border-left-fourth {
+   border-left: .35rem solid 
+   #cbe06a !important;
+}
+.shadow{
+   box-shadow: 5px 5px 50px rgb(228, 225, 225);
+}
+
+@media(max-width: 768px){
+   .margin-left{
+      margin-left: 20px;
+   }
+}
+
+
