@@ -61,8 +61,6 @@ a:focus {
   margin-bottom: 1em;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   width: calc(100% - 5rem);
-  position: fixed;
-  z-index: 1;
 }
 
 .navbar-btn {
@@ -320,6 +318,11 @@ hr {
 
   .chart {
     min-width: 400px;
+  }
+
+  .maps-pos iframe {
+    width: 300px !important;
+    height: 200px !important;
   }
 }
 @media (min-width: 768px) {

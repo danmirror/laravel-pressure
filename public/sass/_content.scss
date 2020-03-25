@@ -74,6 +74,12 @@ hr{
    .chart{
       min-width: 400px;
       }
+   .maps-pos{
+      iframe{
+         width: 300px !important;
+         height: 200px !important;
+      }
+   }
 }
 @media (min-width: 768px) {
    .dashboard{
