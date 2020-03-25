@@ -257,11 +257,6 @@ html {
   text-align: center;
 }
 
-hr {
-  width: 20rem;
-  border: 1px solid #111;
-}
-
 .dashboard {
   min-height: 600px;
 }
@@ -312,20 +307,30 @@ hr {
 }
 
 @media (max-width: 768px) {
+  hr {
+    width: 15rem;
+    border: 1px solid #111;
+  }
+
   .container {
     padding: 50px 0em !important;
   }
 
   .chart {
-    min-width: 400px;
+    min-width: 270px;
   }
 
   .maps-pos iframe {
-    width: 200px !important;
-    height: 150px !important;
+    width: 240px !important;
+    height: 160px !important;
   }
 }
 @media (min-width: 768px) {
+  hr {
+    width: 20rem;
+    border: 1px solid #111;
+  }
+
   .dashboard {
     padding: 6em 3em;
   }
