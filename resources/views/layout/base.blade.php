@@ -20,7 +20,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
    
    <!-- Custom styles for this template -->
-   <link href=" {{ asset('css/style.css') }} " rel="stylesheet">
+   <link href=" {{ secure_asset('css/style.css') }} " rel="stylesheet">
 </head>
 <body>
 
