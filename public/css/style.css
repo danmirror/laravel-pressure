@@ -321,8 +321,8 @@ hr {
   }
 
   .maps-pos iframe {
-    width: 300px !important;
-    height: 200px !important;
+    width: 200px !important;
+    height: 150px !important;
   }
 }
 @media (min-width: 768px) {
