@@ -81,7 +81,7 @@
             <!-- button -->
         
             <div class="container-nav">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
                     <div class="container-fluid">
 
                         <div id="sidebarCollapse" >
