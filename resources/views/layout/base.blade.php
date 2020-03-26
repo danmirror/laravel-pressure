@@ -11,6 +11,7 @@
    <meta name="author" content="">
    @yield('pusher')
 
+   
    @yield('title')
 
    <!-- Bootstrap core CSS -->
