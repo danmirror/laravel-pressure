@@ -212,7 +212,6 @@
                     <div class="row">
                         <div class="col-sm-12 text-center" >
                             <p> &copy;Copyright 2020 | <a href="#">Kendal Agro Astiri</a></p>
-
                         </div>
                         
                     </div>
