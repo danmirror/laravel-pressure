@@ -5,10 +5,10 @@
 <head>
 
    <meta charset="utf-8">
-   <!-- <meta http-equiv="refresh" content="60"> -->
+   <meta http-equiv="refresh" content="60">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-   <meta name="description" content="">
-   <meta name="author" content="">
+   <meta name="description" content="web fullstack api rest">
+   <meta name="author" content="danu andrean">
    @yield('pusher')
 
    
