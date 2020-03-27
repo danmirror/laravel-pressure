@@ -16,40 +16,29 @@ html {
 .dashboard{
    // background-color:  #eee;
    min-height: 600px;
-   // padding : 5em;
 }
+
 .pressure{
    background-color : #eee;
    min-height: 600px;
-   padding: 3em;
-   
-}
-.pressure{
-   background-color : #eee;
-   min-height: 600px;
-   padding: 3em;
 }
 
 .fluid{
    min-height: 600px;
-   padding: 3em;
 }
 
 .boiler{
    background-color : #eee;
    min-height: 600px;
-   padding: 3em;
 }
 
 .condensor{
    min-height: 600px;
-   padding: 3em;
 }
 
 .maps{
    background-color : #eee;
    min-height: 800px;
-   padding: 3em;
 
 }
 
@@ -63,41 +52,112 @@ html {
    padding: 20px;
    box-shadow: 3px 3px 10px 4px rgba(0, 0, 0, 0.1);
 }
-@media (max-width: 768px) {
-   hr{
-      width: 15rem;
-      border: 1px solid #111;
-   }
-   .container{
-      padding: 50px 0em !important;
-   }
-   .chart{
-      min-width: 270px;
-      }
-   .maps-pos{
-      iframe{
-         width: 240px !important;
-         height: 160px !important;
-      }
-   }
-}
+
 @media (min-width: 768px) {
    hr{
-      width: 20rem;
+      width: 15rem;
       border: 1px solid #111;
    }
    .dashboard{
       padding : 6em 3em;
    }
-   .maps-pos{
-      margin-left: 13em ;
+   .pressure{
+      padding : 6em 3em;
    }
+   .fluid{
+      padding : 6em 3em;
+   }
+   .boiler{
+      padding : 6em 3em;
+   }
+   .condensor{
+      padding : 6em 3em;
+   }
+   
+   .container-maps{
+      padding: 3px 12em ;
+   }
+   
    .chart{
       width: 55rem;
       margin-left: 5em;
       
    }
-   #chart{
-         height: 350px !important;
-      }
+  
 }
+@media (min-width: 1024px){
+   .container-maps{
+      padding: 3em 23em ;
+   }
+}
+@media (max-width: 768px) {
+   hr{
+      width: 10rem;
+      border: 1px solid #111;
+   }
+   .container{
+      padding: 50px 0em !important;
+   }
+   .container-foot{
+      padding: 0px 3em !important;
+   }
+   .chart{
+      min-width: 250px;
+      overflow-x: auto;
+      #chart{
+         width: 400px !important;
+         height: 250px !important;
+      }
+      #chart_press{
+         width: 400px !important;
+         height: 270px !important;
+      }
+      #chart_fluid{
+         width: 400px !important;
+         height: 270px !important;
+      }
+      #chart_boiler{
+         width: 400px !important;
+         height: 270px !important;
+      }
+      #chart_condensor{
+         width: 400px !important;
+         height: 270px !important;
+      }
+   }
+   .maps{
+      background-color : #eee;
+      min-height: 600px !important;
+   
+   }
+   .container-maps{
+      padding: 3em 9em ;
+   }
+   .maps-pos{
+      iframe{
+         width: 400px !important;
+         height: 290px !important;
+      }
+   }
+}
+
+@media (max-width : 380px){
+   .container{
+      padding: 70px 0em !important;
+   }
+   .maps{
+      background-color : #eee;
+      min-height: 600px !important;
+   
+   }
+   .container-maps{
+      padding: 20px 2em ;
+   }
+   .maps-pos{
+      iframe{
+         width: 290px !important;
+         height: 290px !important;
+      }
+   }
+}
+

@@ -3,8 +3,8 @@
 
 #sidebarCollapse {
    padding: 15px 15px;
-   width: 40px;
-   margin-top: 3px;
+   width: 32px;
+   margin-top: 4px;
    //   height: 20px;
    position: relative;
    //   margin: 50px auto;
@@ -22,7 +22,7 @@
 #sidebarCollapse span {
   display: block;
   position: absolute;
-  height: 6px;
+  height: 5px;
   width: 100%;
   background: #111;
   border-radius: 9px;
@@ -48,7 +48,7 @@
 }
 
 #sidebarCollapse span:nth-child(2) {
-  top: 10px;
+  top: 9px;
   width: 80%;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -57,7 +57,7 @@
 }
 
 #sidebarCollapse span:nth-child(3) {
-  top: 20px;
+  top: 18px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -83,6 +83,6 @@
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 25px;
+  top: 21px;
   left: 8px;
 }

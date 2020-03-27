@@ -31,22 +31,22 @@
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#dash"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    <a href="#dash"><i class="fas fa-tachometer-alt" id="phonetipe"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="#press"><i class="fas fa-wind"></i> Steam Pressure</a>
+                    <a href="#press"><i class="fas fa-wind" id="phonetipe"></i> Steam Pressure</a>
                 </li>
                 <li>
-                    <a href="#vol"><i class="fas fa-water"></i> Fluid Volume</a>
+                    <a href="#vol"><i class="fas fa-water" id="phonetipe"></i> Fluid Volume</a>
                 </li>
                 <li>
-                    <a href="#boiler"><i class="fas fa-temperature-low"></i> Boiler Temp</a>
+                    <a href="#boiler"><i class="fas fa-temperature-low" id="phonetipe"></i> Boiler Temp</a>
                 </li>
                 <li>
-                    <a href="#cond"><i class="fas fa-temperature-low"></i> Condensor Temp</a>
+                    <a href="#cond"><i class="fas fa-temperature-low" id="phonetipe"></i> Condensor Temp</a>
                 </li>
                 <li>
-                    <a href="#maps"><i class="fas fa-map-marker-alt"></i>  Location</a>
+                    <a href="#maps"><i class="fas fa-map-marker-alt" id="phonetipe"></i>  Location</a>
                 </li>
                 <!-- <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
@@ -81,7 +81,7 @@
             <!-- button -->
         
             <div class="container-nav">
-                <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
 
                         <div id="sidebarCollapse" >
@@ -98,7 +98,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="nav navbar-nav ml-auto">
                                 <form class="form-inline my-2 my-lg-0" action="" method="GET">
-                                    <input class="form-control mr-sm-2" name="cari" type="search" placeholder="Cari " aria-label="Search">
+                                    <input class="form-control mr-sm-2" name="cari" type="search" placeholder="Search Data hh/dd/mm/yyyy " aria-label="Search">
                                     <button class="btn btn-outline-success my-2 "  type="submit">Search</button>
                                 </form>
                             </ul>
@@ -109,7 +109,7 @@
             
             <section class="dashboard" id="dash">
                 <div class="container ">
-                <h1 class=" title">Data</h1>
+                <h2 class=" title">Data</h2>
                 <hr >
                     <div class="row mb-4" >
                     <div class="col-sm-3 mb-2 margin-left">
@@ -164,43 +164,47 @@
 
             <section class="pressure " id="press">
                 <div class="container">
-                    <h1 class=" title mt-5 mb-2">Pressure Sensor</h1>
+                    <h2 class=" title mt-5 mb-2">Pressure</h2>
                     <hr>
                     <div class="chart">
                      <canvas id="chart_press"></canvas>
                     </div>
+                    <p class="text-center"> Menggunakan Satuan (kPa).</p>
                 </div>
             </section>
             <section class="fluid" id="vol">
                 <div class="container">
-                    <h1 class=" title mt-5 mb-2">Fluid Vol</h1>
+                    <h2 class=" title mt-5 mb-2">Fluid Vol</h2>
                     <hr>
                     <div class="chart">
                      <canvas id="chart_fluid"></canvas>
                     </div>
+                    <p class="text-center"> Menggunakan Satuan (L).</p>
                 </div>
             </section>
             <section class="boiler" id="boiler">
                 <div class="container">
-                    <h1 class=" title mt-5 mb-2">Boiler Temp</h1>
+                    <h2 class=" title mt-5 mb-2">Boiler Temp</h2>
                     <hr>
                     <div class="chart">
                      <canvas id="chart_boiler"></canvas>
                     </div>
+                    <p class="text-center"> Menggunakan Satuan (℃).</p>
                 </div>
             </section>
             <section class="condensor" id="cond">
                 <div class="container">
-                    <h1 class=" title mt-5 mb-2">Condensor Temp</h1>
+                    <h2 class=" title mt-5 mb-2">Cond Temp</h2>
                     <hr>
                     <div class="chart">
                      <canvas id="chart_condensor"></canvas>
                     </div>
+                    <p class="text-center"> Menggunakan Satuan (℃).</p>
                 </div>
             </section>
             <section class="maps" id="maps">
-                <div class="container">
-                    <h1 class=" title mt-5 mb-2">Location</h1>
+                <div class="container-maps">
+                    <h2 class=" title mt-5 mb-2">Location</h2>
                     <hr>
                     <div class="maps-pos">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.6665663519028!2d109.98973182916318!3d-7.164524999676682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDknNTIuMyJTIDEwOcKwNTknMjUuMCJF!5e0!3m2!1sid!2sid!4v1585054315177!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -208,10 +212,10 @@
                 </div>
             </section>
             <section class="footer" id="footer">
-                <div class="container">
+                <div class="container-foot">
                     <div class="row">
                         <div class="col-sm-12 text-center" >
-                            <p> &copy;Copyright 2020 | <a href="#">Kendal Agro Astiri</a></p>
+                            <p> &copy;Copyright | <a href="#">Kendal Agro Astiri</a> 2020</p>
                         </div>
                         
                     </div>

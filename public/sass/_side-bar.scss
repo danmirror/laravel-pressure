@@ -32,8 +32,8 @@ a:focus {
     margin-bottom: 1em;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     width: calc(100% - 5rem);
-    // position: fixed;
-    // z-index: 1;
+    position: fixed;
+    z-index: 1;
 }
 
 .navbar-btn {
@@ -161,9 +161,9 @@ a.article:hover {
     right: 0;
 }
 
-#content.active {
-    width: 100%;
-}
+// #content.active {
+//     width: 100%;
+// }
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -178,9 +178,9 @@ a.article:hover {
 #content {
    width: 100%;
 }
-#content.active {
-   width: calc(100% - 250px);
-}
+// #content.active {
+//    width: calc(100% - 250px);
+// }
 #sidebarCollapse span {
    display: none;
 }
@@ -217,4 +217,31 @@ a.article:hover {
       #sidebar {
          margin-left: -250px;
       }
+    #content.active {
+        .container-nav{
+            padding: 0px 250px;
+         }
+        .chart{
+            min-width: 0px;
+            }
+        .maps-pos{
+            iframe{
+                width:  50px !important;
+                height: 50px !important;
+            }
+        }
+    // width: calc(100% - 250px);
+    // .navbar{
+    //     width: calc(100% - 2rem);
+    //     transition: 1s;
+    //     }
+        // .chart{
+        //     margin-left: calc(100% - 55rem);
+        //     transition: 1s;
+        // }
+        // .maps{
+        //     margin-left: -7em;
+        //     transition: 1s;
+        // }
+    }
 }

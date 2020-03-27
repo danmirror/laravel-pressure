@@ -25,6 +25,11 @@
   box-shadow: 5px 5px 50px #e4e1e1;
 }
 
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
 @media (max-width: 768px) {
   .margin-left {
     margin-left: 20px;
@@ -61,6 +66,8 @@ a:focus {
   margin-bottom: 1em;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   width: calc(100% - 5rem);
+  position: fixed;
+  z-index: 1;
 }
 
 .navbar-btn {
@@ -184,10 +191,6 @@ a.article:hover {
   right: 0;
 }
 
-#content.active {
-  width: 100%;
-}
-
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -201,10 +204,6 @@ a.article:hover {
 
 #content {
   width: 100%;
-}
-
-#content.active {
-  width: calc(100% - 250px);
 }
 
 #sidebarCollapse span {
@@ -244,6 +243,17 @@ a.article:hover {
   #sidebar {
     margin-left: -250px;
   }
+
+  #content.active .container-nav {
+    padding: 0px 250px;
+  }
+  #content.active .chart {
+    min-width: 0px;
+  }
+  #content.active .maps-pos iframe {
+    width: 50px !important;
+    height: 50px !important;
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -264,35 +274,24 @@ html {
 .pressure {
   background-color: #eee;
   min-height: 600px;
-  padding: 3em;
-}
-
-.pressure {
-  background-color: #eee;
-  min-height: 600px;
-  padding: 3em;
 }
 
 .fluid {
   min-height: 600px;
-  padding: 3em;
 }
 
 .boiler {
   background-color: #eee;
   min-height: 600px;
-  padding: 3em;
 }
 
 .condensor {
   min-height: 600px;
-  padding: 3em;
 }
 
 .maps {
   background-color: #eee;
   min-height: 800px;
-  padding: 3em;
 }
 
 .footer {
@@ -306,28 +305,9 @@ html {
   box-shadow: 3px 3px 10px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-  hr {
-    width: 15rem;
-    border: 1px solid #111;
-  }
-
-  .container {
-    padding: 50px 0em !important;
-  }
-
-  .chart {
-    min-width: 270px;
-  }
-
-  .maps-pos iframe {
-    width: 240px !important;
-    height: 160px !important;
-  }
-}
 @media (min-width: 768px) {
   hr {
-    width: 20rem;
+    width: 15rem;
     border: 1px solid #111;
   }
 
@@ -335,17 +315,106 @@ html {
     padding: 6em 3em;
   }
 
-  .maps-pos {
-    margin-left: 13em;
+  .pressure {
+    padding: 6em 3em;
+  }
+
+  .fluid {
+    padding: 6em 3em;
+  }
+
+  .boiler {
+    padding: 6em 3em;
+  }
+
+  .condensor {
+    padding: 6em 3em;
+  }
+
+  .container-maps {
+    padding: 3px 12em;
   }
 
   .chart {
     width: 55rem;
     margin-left: 5em;
   }
+}
+@media (min-width: 1024px) {
+  .container-maps {
+    padding: 3em 23em;
+  }
+}
+@media (max-width: 768px) {
+  hr {
+    width: 10rem;
+    border: 1px solid #111;
+  }
 
-  #chart {
-    height: 350px !important;
+  .container {
+    padding: 50px 0em !important;
+  }
+
+  .container-foot {
+    padding: 0px 3em !important;
+  }
+
+  .chart {
+    min-width: 250px;
+    overflow-x: auto;
+  }
+  .chart #chart {
+    width: 400px !important;
+    height: 250px !important;
+  }
+  .chart #chart_press {
+    width: 400px !important;
+    height: 270px !important;
+  }
+  .chart #chart_fluid {
+    width: 400px !important;
+    height: 270px !important;
+  }
+  .chart #chart_boiler {
+    width: 400px !important;
+    height: 270px !important;
+  }
+  .chart #chart_condensor {
+    width: 400px !important;
+    height: 270px !important;
+  }
+
+  .maps {
+    background-color: #eee;
+    min-height: 600px !important;
+  }
+
+  .container-maps {
+    padding: 3em 9em;
+  }
+
+  .maps-pos iframe {
+    width: 400px !important;
+    height: 290px !important;
+  }
+}
+@media (max-width: 380px) {
+  .container {
+    padding: 70px 0em !important;
+  }
+
+  .maps {
+    background-color: #eee;
+    min-height: 600px !important;
+  }
+
+  .container-maps {
+    padding: 20px 2em;
+  }
+
+  .maps-pos iframe {
+    width: 290px !important;
+    height: 290px !important;
   }
 }
 #button {
@@ -392,8 +461,8 @@ html {
 /* Icon 1 */
 #sidebarCollapse {
   padding: 15px 15px;
-  width: 40px;
-  margin-top: 3px;
+  width: 32px;
+  margin-top: 4px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -409,7 +478,7 @@ html {
 #sidebarCollapse span {
   display: block;
   position: absolute;
-  height: 6px;
+  height: 5px;
   width: 100%;
   background: #111;
   border-radius: 9px;
@@ -434,7 +503,7 @@ html {
 }
 
 #sidebarCollapse span:nth-child(2) {
-  top: 10px;
+  top: 9px;
   width: 80%;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -443,7 +512,7 @@ html {
 }
 
 #sidebarCollapse span:nth-child(3) {
-  top: 20px;
+  top: 18px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -469,7 +538,7 @@ html {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 25px;
+  top: 21px;
   left: 8px;
 }
 

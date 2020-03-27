@@ -20,7 +20,10 @@
 .shadow{
    box-shadow: 5px 5px 50px rgb(228, 225, 225);
 }
-
+.row{
+   margin-right: 0 !important;
+   margin-left: 0 !important;
+}
 @media(max-width: 768px){
    .margin-left{
       margin-left: 20px;
