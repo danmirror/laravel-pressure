@@ -226,8 +226,8 @@ a.article:hover {
     margin-left: calc(100% - 55rem);
     transition: 1s;
   }
-  #content.active .maps {
-    margin-left: -7em;
+  #content.active .maps-pos {
+    margin-left: -8em;
     transition: 1s;
   }
 }
