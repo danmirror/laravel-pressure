@@ -249,7 +249,7 @@
             //     scrollTop:0 
             // }, '300');
             $('html, body').animate({scrollTop:0}, '500');
-            console.log("dd")
+            // console.log("dd")
         });
 
         // sidebar
