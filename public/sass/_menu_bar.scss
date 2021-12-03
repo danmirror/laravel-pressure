@@ -22,8 +22,8 @@
 #sidebarCollapse span {
   display: block;
   position: absolute;
-  height: 5px;
-  width: 100%;
+  height: 3px;
+  width: 80%;
   background: #111;
   border-radius: 9px;
   opacity: 1;
@@ -49,7 +49,7 @@
 
 #sidebarCollapse span:nth-child(2) {
   top: 9px;
-  width: 80%;
+  width: 70%;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -69,7 +69,7 @@
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: -4px;
+  top: 0px;
   left: 8px;
 }
 
@@ -83,6 +83,6 @@
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 21px;
+  top: 18px;
   left: 8px;
 }

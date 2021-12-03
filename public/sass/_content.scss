@@ -42,6 +42,17 @@ html {
 
 }
 
+.setPoint{
+   padding: 3em;
+   min-height: 600px;
+}
+.setPoint-content{
+   padding: 2em;
+   // min-height: 600px;
+}
+.search-button{
+   font-size: 22px;
+}
 .footer{
 	position: absolute;
 	width: 100%;
@@ -62,6 +73,9 @@ html {
       padding : 6em 3em;
    }
    .pressure{
+      padding : 6em 3em;
+   }
+   .setPoint{
       padding : 6em 3em;
    }
    .fluid{

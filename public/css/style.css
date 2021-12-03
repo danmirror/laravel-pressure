@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 @import "https://fonts.googleapis.com/css?family=Merriweather:400,900,900i";
 .card {
@@ -19,10 +18,6 @@
 
 .border-left-fourth {
   border-left: 0.35rem solid #cbe06a !important;
-}
-
-.shadow {
-  box-shadow: 5px 5px 50px #e4e1e1;
 }
 
 .row {
@@ -136,7 +131,6 @@ a:focus {
 #sidebar ul li.active > a,
 a[aria-expanded=true] {
   color: #fff;
-  background: #cc6dbc;
 }
 
 a[data-toggle=collapse] {
@@ -215,18 +209,22 @@ a.article:hover {
     padding: 0px 40px;
   }
 
-  #content.active {
+  #sidebar {
+    margin-left: 0;
+  }
+
+  #content {
     width: calc(100% - 250px);
   }
-  #content.active .navbar {
+  #content .navbar {
     width: calc(100% - 20rem);
     transition: 1s;
   }
-  #content.active .chart {
+  #content .chart {
     margin-left: calc(100% - 55rem);
     transition: 1s;
   }
-  #content.active .maps-pos {
+  #content .maps-pos {
     margin-left: -8em;
     transition: 1s;
   }
@@ -287,6 +285,19 @@ html {
   min-height: 800px;
 }
 
+.setPoint {
+  padding: 3em;
+  min-height: 600px;
+}
+
+.setPoint-content {
+  padding: 2em;
+}
+
+.search-button {
+  font-size: 22px;
+}
+
 .footer {
   position: absolute;
   width: 100%;
@@ -309,6 +320,10 @@ html {
   }
 
   .pressure {
+    padding: 6em 3em;
+  }
+
+  .setPoint {
     padding: 6em 3em;
   }
 
@@ -427,7 +442,7 @@ html {
 }
 
 #button::after {
-  content: "";
+  content: "\f077";
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
@@ -471,8 +486,8 @@ html {
 #sidebarCollapse span {
   display: block;
   position: absolute;
-  height: 5px;
-  width: 100%;
+  height: 3px;
+  width: 80%;
   background: #111;
   border-radius: 9px;
   opacity: 1;
@@ -497,7 +512,7 @@ html {
 
 #sidebarCollapse span:nth-child(2) {
   top: 9px;
-  width: 80%;
+  width: 70%;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -517,7 +532,7 @@ html {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: -4px;
+  top: 0px;
   left: 8px;
 }
 
@@ -531,7 +546,7 @@ html {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 21px;
+  top: 18px;
   left: 8px;
 }
 

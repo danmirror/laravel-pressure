@@ -103,7 +103,7 @@ a:focus {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #cc6dbc;
+    // background: #cc6dbc;
 }
 
 a[data-toggle="collapse"] {
@@ -189,8 +189,11 @@ a.article:hover {
     .container-nav{
         padding: 0px 40px;
      }
+     #sidebar {
+        margin-left: 0;
+     }
 
-   #content.active {
+   #content{
       width: calc(100% - 250px);
       .navbar{
          width: calc(100% - 20rem);

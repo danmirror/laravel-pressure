@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\data;
+use App\setPoint;
 use App\Events\eventTrigger;
 use Illuminate\Http\Request;
 
@@ -12,14 +13,14 @@ class dataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function event()
-    {
-        event( new eventTrigger());
-    }
-    public function ov()
-    {
-        return view('indexoverlay');
-   }
+    // public function event()
+    // {
+    //     event( new eventTrigger());
+    // }
+    // public function ov()
+    // {
+    //     return view('indexoverlay');
+    // }
     public function index(Request $request)
     {
         // $time = date("d");
@@ -28,9 +29,10 @@ class dataController extends Controller
 
 
         // dd($times);
-        
         $cari = $request->cari;
         $cari_time =  $cari;
+        
+        $parameter = setPoint::all()->first();
 
         if($cari == null){
             $data = data::where('hari','like',"%".$times."%")->get();
@@ -40,7 +42,9 @@ class dataController extends Controller
         }
   
         // dd($data);
-        return view('index',compact('data'));
+        return view('index',[
+            'data' => $data,
+            'parameter' => $parameter]);
     }
 
     /**

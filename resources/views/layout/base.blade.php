@@ -5,7 +5,7 @@
 <head>
 
    <meta charset="utf-8">
-   <meta http-equiv="refresh" content="60">
+   <!-- <meta http-equiv="refresh" content="60"> -->
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
    <meta name="description" content="web fullstack api rest">
    <meta name="author" content="danu andrean">
@@ -16,12 +16,13 @@
 
    <!-- Bootstrap core CSS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   
+ 
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
    
    <!-- Custom styles for this template -->
-   <link href=" {{ secure_asset('css/style.css') }} " rel="stylesheet">
+   <link href=" {{ asset('css/style.css') }} " rel="stylesheet">
 </head>
 <body>
 
