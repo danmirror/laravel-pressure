@@ -21,4 +21,8 @@ Route::group(['prefix'=>'v1'],function(){
     Route::get('/data',[
         'uses'=>'dataController@store'
     ]);
+    
 });
+Route::get('/respon',[
+    'uses'=>'responController@response'
+]);

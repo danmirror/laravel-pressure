@@ -42,10 +42,10 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="mailto:name@mydomain.com" class="email">Email</a>
+                    <a href="https://wa.me/6285717456389" class="email">whatsapp</a>
                 </li>
                 <li>
-                    <a href="/" class="article">Refresh Page</a>
+                    <a href="{{route('setPoint')}}" class="article">Refresh Page</a>
                 </li>
             </ul>
         </nav>
@@ -239,7 +239,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6 ">
+                                            <div class="col-sm-6 ">
                                             <span class="btn btn-outline-success " onclick="pressure_on();" id="press_id_on">ON</span>
                                             </div>
                                             <div class="col-sm-6">
@@ -262,7 +262,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6 ">
+                                            <div class="col-sm-6 ">
                                             <span class="btn btn-outline-success " onclick="volume_on();" id="volume_id_on">ON</span>
                                             </div>
                                             <div class="col-sm-6">
@@ -285,7 +285,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6 ">
+                                            <div class="col-sm-6 ">
                                             <span class="btn btn-outline-success " onclick="boiler_on();" id="boiler_id_on">ON</span>
                                             </div>
                                             <div class="col-sm-6">
@@ -308,7 +308,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6 ">
+                                            <div class="col-sm-6 ">
                                             <span class="btn btn-outline-success " onclick="condensor_on();" id="condensor_id_on">ON</span>
                                             </div>
                                             <div class="col-sm-6">

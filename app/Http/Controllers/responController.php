@@ -50,4 +50,34 @@ class responController extends Controller
             }
         }
     }
+
+    public function response(Request $request)
+    {
+
+        $parameter = respon::all()->first();
+        if($parameter == null){
+
+            $response = [
+                'btn1' => '0',
+                'btn2' => '0',
+                'btn3' => '0',
+                'btn4' => '0',
+            ];
+            // return response()->json($response,200);
+            return response($response, 200)
+                  ->header('Content-Type', 'text/plain');
+        }
+        else{
+
+            $response = [
+                'btn1' => $parameter->btn1,
+                'btn2' => $parameter->btn2,
+                'btn3' => $parameter->btn3,
+                'btn4' => $parameter->btn4,
+            ];
+            return response()->json($response,200);
+        }
+
+
+    }
 }

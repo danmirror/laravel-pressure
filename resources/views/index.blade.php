@@ -51,7 +51,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/setPoint"><i class="fas fa-tasks" id="phonetipe"></i>  SetPoint</a>
+                    <a href="{{route('setPoint')}}"><i class="fas fa-tasks" id="phonetipe"></i>  SetPoint</a>
                 </li>
                 <li>
                     <a href="#maps"><i class="fas fa-map-marker-alt" id="phonetipe"></i>  Location</a>
@@ -61,7 +61,7 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="mailto:name@mydomain.com" class="email">Email</a>
+                    <a href="https://wa.me/6285717456389" class="email">whatsapp</a>
                 </li>
                 <li>
                     <a href="/" class="article">Refresh Page</a>
@@ -94,7 +94,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="nav navbar-nav ml-auto">
                                 <form class="form-inline my-2 my-lg-0" action="" method="GET">
-                                    <input class="form-control mr-sm-2" name="cari" type="search" placeholder="Search Data hh/dd/mm/yyyy " aria-label="Search">
+                                    <input class="form-control mr-sm-2" name="cari" type="search" placeholder="Search Data hour format hh " aria-label="Search">
                                     <button class="btn btn-outline-success my-2 "  type="submit">Search</button>
                                 </form>
                             </ul>
