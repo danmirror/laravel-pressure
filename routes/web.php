@@ -20,5 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','dataController@index');
 Route::get('/setPoint','setPointController@index')->name("setPoint");
 Route::post('/setPoint/update','setPointController@store')->name("setPoint-update");
+Route::post('/respon/update','responController@store')->name("respon-update");
 // Route::get('/event','dataController@event');
 // Route::get('/ov','dataController@ov');

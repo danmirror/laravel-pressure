@@ -1,4 +1,6 @@
 @extends('layout/base')
+
+@section('title','SetPoint')
 @section('content')
 
     <div class="wrapper">
@@ -103,7 +105,7 @@
                     </div>
                     @endif
 
-                    <div class="setPoint-content shadow">
+                    <div class="setPoint-content shadow mb-5">
                         <form action="{{route('setPoint-update')}}" method="post">
                             @csrf
                             <div class="row">
@@ -202,10 +204,147 @@
                             </div>
 
                             <div class="d-flex justify-content-sm-end">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-outline-primary">Submit</button>
                             </div>                               
                         </form>
                     
+                    </div>
+
+                    <h2 class=" title  mb-2">Control</h2>
+                    
+                    @if(session('alert-control'))
+                    <div class="alert alert-danger" role="alert">
+                    {{ session('alert-control') }}
+                    </div>
+                    @endif
+                    @if(session('alert-success-control'))
+                    <div class="alert alert-success" role="alert">
+                    {{ session('alert-success-control') }}
+                    </div>
+                    @endif
+                    <div class="setPoint-content shadow mb-5">
+                        <form action="{{route('respon-update')}}" method="post">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-3 ">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <label >Pressure</label>
+                                            </div>
+                                            <div class="col-md mb-2">
+                                                <div class="input-group ">
+                                                    <input type="hidden"  type="text" class="form-control" name="pressure_control" value="<?php if($respon)echo$respon->btn1?>" id="pressure_value">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 ">
+                                            <span class="btn btn-outline-success " onclick="pressure_on();" id="press_id_on">ON</span>
+                                            </div>
+                                            <div class="col-sm-6">
+                                            <span class="btn btn-outline-danger " onclick="pressure_off();" id="press_id_off">off</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 ">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <label >Volume</label>
+                                            </div>
+                                            <div class="col-md mb-2">
+                                                <div class="input-group ">
+                                                    <input type="hidden"  type="text" class="form-control" name="volume_control" value="<?php if($respon)echo$respon->btn2?>" id="volume_value">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 ">
+                                            <span class="btn btn-outline-success " onclick="volume_on();" id="volume_id_on">ON</span>
+                                            </div>
+                                            <div class="col-sm-6">
+                                            <span class="btn btn-outline-danger " onclick="volume_off();" id="volume_id_off">off</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 ">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <label >Boiler</label>
+                                            </div>
+                                            <div class="col-md mb-2">
+                                                <div class="input-group ">
+                                                    <input type="hidden"  type="text" class="form-control" name="boiler_control" value="<?php if($respon)echo$respon->btn3?>" id="boiler_value">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 ">
+                                            <span class="btn btn-outline-success " onclick="boiler_on();" id="boiler_id_on">ON</span>
+                                            </div>
+                                            <div class="col-sm-6">
+                                            <span class="btn btn-outline-danger " onclick="boiler_off();" id="boiler_id_off">off</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 ">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <label >cond</label>
+                                            </div>
+                                            <div class="col-md mb-2">
+                                                <div class="input-group ">
+                                                    <input type="hidden"  type="text" class="form-control" name="condensor_control" value="<?php if($respon)echo$respon->btn4?>" id="condensor_value">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 ">
+                                            <span class="btn btn-outline-success " onclick="condensor_on();" id="condensor_id_on">ON</span>
+                                            </div>
+                                            <div class="col-sm-6">
+                                            <span class="btn btn-outline-danger " onclick="condensor_off();" id="condensor_id_off">off</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    control ini menyebabkan sensor off dan sistem monitoring akan berhenti,
+                                    tetap control?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">submit</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+
+                            <div class="d-flex justify-content-sm-end ">
+                                <button  class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#exampleModal">Set</button>
+                            </div>                               
+                        </form>
                     </div>
                 </div>
             </section>
@@ -252,6 +391,138 @@
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
         });
+        var btn1 = <?php echo $respon['btn1']?>;
+        var btn2 = <?php echo $respon['btn2']?>;
+        var btn3 = <?php echo $respon['btn3']?>;
+        var btn4 = <?php echo $respon['btn4']?>;
+        if(btn1)
+            pressure_on();
+        else
+            pressure_off();
+
+        if(btn2)
+            volume_on();
+        else
+            volume_off();
+
+        if(btn3)
+            boiler_on();
+        else
+            boiler_off();
+
+        if(btn4)
+            condensor_on();
+        else
+            condensor_off();
+        
+
+        function pressure_on(){
+            let count_press =1;
+            // console.log(count_press);
+            let element_on = document.getElementById("press_id_on");
+            let element_off= document.getElementById("press_id_off");
+            element_on.classList.remove("btn-outline-success");
+            element_on.classList.add("btn-success");
+
+            element_off.classList.remove("btn-danger");
+            element_off.classList.add("btn-outline-danger");
+
+            document.getElementById('pressure_value').value=count_press; 
+        }
+        function pressure_off(){
+            let count_press =0;
+            // console.log(count_press);
+            let element_on = document.getElementById("press_id_on");
+            let element_off = document.getElementById("press_id_off");
+            element_off.classList.remove("btn-outline-danger");
+            element_off.classList.add("btn-danger");
+
+            element_on.classList.remove("btn-success");
+            element_on.classList.add("btn-outline-success");
+
+            document.getElementById('pressure_value').value=count_press; 
+        }
+
+        function volume_on(){
+            let count_volume =1;
+            // console.log(count_volume);
+            let element_on = document.getElementById("volume_id_on");
+            let element_off= document.getElementById("volume_id_off");
+            element_on.classList.remove("btn-outline-success");
+            element_on.classList.add("btn-success");
+
+            element_off.classList.remove("btn-danger");
+            element_off.classList.add("btn-outline-danger");
+
+            document.getElementById('volume_value').value=count_volume; 
+        }
+        function volume_off(){
+            let count_volume =0;
+            // console.log(count_volume);
+            let element_on = document.getElementById("volume_id_on");
+            let element_off = document.getElementById("volume_id_off");
+            element_off.classList.remove("btn-outline-danger");
+            element_off.classList.add("btn-danger");
+
+            element_on.classList.remove("btn-success");
+            element_on.classList.add("btn-outline-success");
+
+            document.getElementById('volume_value').value=count_volume; 
+        }
+
+        function boiler_on(){
+            let count_boiler =1;
+            // console.log(count_boiler);
+            let element_on = document.getElementById("boiler_id_on");
+            let element_off= document.getElementById("boiler_id_off");
+            element_on.classList.remove("btn-outline-success");
+            element_on.classList.add("btn-success");
+
+            element_off.classList.remove("btn-danger");
+            element_off.classList.add("btn-outline-danger");
+
+            document.getElementById('boiler_value').value=count_boiler; 
+        }
+        function boiler_off(){
+            let count_boiler =0;
+            // console.log(count_boiler);
+            let element_on = document.getElementById("boiler_id_on");
+            let element_off = document.getElementById("boiler_id_off");
+            element_off.classList.remove("btn-outline-danger");
+            element_off.classList.add("btn-danger");
+
+            element_on.classList.remove("btn-success");
+            element_on.classList.add("btn-outline-success");
+
+            document.getElementById('boiler_value').value=count_boiler; 
+        }
+
+        function condensor_on(){
+            let count_condensor =1;
+            // console.log(count_condensor);
+            let element_on = document.getElementById("condensor_id_on");
+            let element_off= document.getElementById("condensor_id_off");
+            element_on.classList.remove("btn-outline-success");
+            element_on.classList.add("btn-success");
+
+            element_off.classList.remove("btn-danger");
+            element_off.classList.add("btn-outline-danger");
+
+            document.getElementById('condensor_value').value=count_condensor; 
+        }
+        function condensor_off(){
+            let count_condensor =0;
+            // console.log(count_condensor);
+            let element_on = document.getElementById("condensor_id_on");
+            let element_off = document.getElementById("condensor_id_off");
+            element_off.classList.remove("btn-outline-danger");
+            element_off.classList.add("btn-danger");
+
+            element_on.classList.remove("btn-success");
+            element_on.classList.add("btn-outline-success");
+
+            document.getElementById('condensor_value').value=count_condensor; 
+        }
 
          
     </script>

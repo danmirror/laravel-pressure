@@ -9,10 +9,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
    <meta name="description" content="web fullstack api rest">
    <meta name="author" content="danu andrean">
-   @yield('pusher')
-
+   <!-- @yield('pusher') -->
+   <title>@yield('title')</title>
    
-   @yield('title')
 
    <!-- Bootstrap core CSS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">

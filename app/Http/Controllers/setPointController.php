@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\setPoint;
+use App\respon;
 use Illuminate\Http\Request;
 
 class setPointController extends Controller
@@ -9,8 +10,10 @@ class setPointController extends Controller
     public function index()
     {
         $parameter = setPoint::all()->first();
+        $respon = respon::all()->first();
         return view('setPoint',[
             'parameter' => $parameter,
+            'respon' => $respon,
         ]);
     }
 
