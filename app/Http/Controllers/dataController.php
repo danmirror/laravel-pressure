@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\data;
 use App\setPoint;
+use App\respon;
 use App\Events\eventTrigger;
 use Illuminate\Http\Request;
 
@@ -75,6 +76,41 @@ class dataController extends Controller
         $jam = date("HdmY", $time+7*60*60);
         $hari = date("dmY", $time+7*60*60);
         // dd($times);
+
+        $setPoint = setPoint::all()->first();
+        $parameter = respon::all()->first();
+
+        if($setPoint->max_pressure <= $request['data1'] ||
+            $setPoint->max_volume <= $request['data2'] ||
+            $setPoint->max_boiler <= $request['data3'] ||
+            $setPoint->max_condensor <= $request['data4']
+        ){
+
+            $parameter->btn1 = $parameter->btn1;
+            $parameter->btn2 = $parameter->btn2;
+            $parameter->btn3 = $parameter->btn3;
+            $parameter->btn4 = $parameter->btn4;
+
+            if($setPoint->max_pressure <= $request['data1']){
+                $parameter->btn1 = "0";
+            }
+            if($setPoint->max_volume <= $request['data2']){
+                $parameter->btn2 = "0";
+            }
+            if($setPoint->max_boiler <= $request['data3']){
+                $parameter->btn3 = "0";
+            }
+            if($setPoint->max_condensor <= $request['data4']){
+                $parameter->btn4 = "0";
+            }
+
+            $parameter->save();
+        }
+
+
+
+       
+        
 
         $data = new data([
             'data1' => $request['data1'],
