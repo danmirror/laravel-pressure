@@ -2,20 +2,6 @@
     DEMO STYLE
 */
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
-}
-
 a,
 a:hover,
 a:focus {
@@ -76,7 +62,9 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 10px 5px;
-    background: #6d7fcc;
+    background: #ffffff;
+    border: 5px  #6d7fcc solid;   
+    border-radius: 20px;
 }
 
 #sidebar ul.components {
