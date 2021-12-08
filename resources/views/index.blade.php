@@ -258,10 +258,11 @@
             // console.log("dd")
         });
 
-        var pressure = <?php echo end($tekanan) ?>;
-        var volume = <?php echo end($debit) ?>;
-        var boiler = <?php echo end($suhu_1) ?>;
-        var condensor = <?php echo end($suhu_2) ?>;
+        var pressure = <?php echo end($tekanan)? end($tekanan) : '0'?>; 
+        var volume = <?php echo end($debit)? end($debit) : '0'; ?>;
+        var boiler = <?php echo end($suhu_1)? end($tekasuhu_1nan) : '0'; ?>;
+        var condensor = <?php echo end($suhu_2)? end($suhu_2) : '0'; ?>;
+
 
         var min_pressure = <?php echo $parameter->min_pressure ?>;
         var max_pressure = <?php echo $parameter->max_pressure ?>;

@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="col-md-12 text-center">
                                     <img src="{{ asset('img/kaa.jpeg') }}" alt="" style="width: 130px;"> 
-                                    <img src="{{ asset('img/kaa.jpeg') }}" alt="" style="width: 130px;"> 
+                                    <!-- <img src="{{ asset('img/kaa.jpeg') }}" alt="" style="width: 130px;">  -->
                                    <p>  </p>
                                 </div>
                             </div>
