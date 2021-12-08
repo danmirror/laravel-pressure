@@ -58,7 +58,7 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="https://wa.me/6285717456389" class="email">whatsapp</a>
+                    <a href="https://wa.me/6281271035056" class="email">whatsapp</a>
                 </li>
                 <li>
                     <a href="{{route('setPoint')}}" class="article">Refresh Page</a>
@@ -407,10 +407,10 @@
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
         });
-        var btn1 = <?php echo $respon['btn1']?>;
-        var btn2 = <?php echo $respon['btn2']?>;
-        var btn3 = <?php echo $respon['btn3']?>;
-        var btn4 = <?php echo $respon['btn4']?>;
+        var btn1 = <?php echo $respon?$respon['btn1']:"0"?>;
+        var btn2 = <?php echo $respon?$respon['btn2']:"0"?>;
+        var btn3 = <?php echo $respon?$respon['btn3']:"0"?>;
+        var btn4 = <?php echo $respon?$respon['btn4']:"0"?>;
         if(btn1)
             pressure_on();
         else

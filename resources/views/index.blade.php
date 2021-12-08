@@ -263,15 +263,14 @@
         var boiler = <?php echo end($suhu_1)? end($tekasuhu_1nan) : '0'; ?>;
         var condensor = <?php echo end($suhu_2)? end($suhu_2) : '0'; ?>;
 
-
-        var min_pressure = <?php echo $parameter->min_pressure ?>;
-        var max_pressure = <?php echo $parameter->max_pressure ?>;
-        var min_volume = <?php echo $parameter->min_volume ?>;
-        var max_volume = <?php echo $parameter->max_volume ?>;
-        var min_boiler = <?php echo $parameter->min_boiler ?>;
-        var max_boiler = <?php echo $parameter->max_boiler ?>;
-        var min_condensor = <?php echo $parameter->min_condensor ?>;
-        var max_condensor = <?php echo $parameter->max_condensor ?>;
+        var min_pressure = <?php echo $parameter ?"$parameter->min_pressure":"0" ?>;
+        var max_pressure = <?php echo $parameter?$parameter->max_pressure:"0"  ?>;
+        var min_volume = <?php echo $parameter?$parameter->min_volume:"0"  ?>;
+        var max_volume = <?php echo $parameter?$parameter->max_volume:"0"  ?>;
+        var min_boiler = <?php echo $parameter?$parameter->min_boiler:"0"  ?>;
+        var max_boiler = <?php echo $parameter?$parameter->max_boiler:"0"  ?>;
+        var min_condensor = <?php echo $parameter?$parameter->min_condensor:"0"  ?>;
+        var max_condensor = <?php echo $parameter?$parameter->max_condensor:"0"  ?>;
 
 
         let auto_1 = document.getElementById("auto-protect-1");
